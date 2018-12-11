@@ -1,0 +1,200 @@
+test([
+		{
+			"url":"www.hungama.com/act",
+			"name": "Hungama ACT"
+		},{
+			"url":"http://192.168.60.137/act",
+			"name": "Hungama ACT Staging"
+		},{
+			"url":"localhost",
+			"name": "local"
+		},{
+			"url":"192.168.10.213",
+			"name": "Player Staging"
+		},{
+			"url":"liveact-1055512895.us-east-1.elb.amazonaws.com",
+			"name": "Hungama ACT L"
+		},{
+			"url":"http://www.hungama.com/slt/",
+			"name": "Hungama SLT"
+		},{
+			"url":"http://slt-prod-2023689350.us-east-1.elb.amazonaws.com/slt/",
+			"name": "Hungama SLT L"
+		},{
+			"url":"http://sltstg.hungama.com/slt/",
+			"name": "Hungama ACT S"
+		},{
+			"url":"192.168.10.154",
+			"name": "vodafonemusic_sb ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ staging server"
+		},{
+			"url":"http://player.hungama.com",
+			"name": "Hungama Player"
+		},{
+			"url":"http://www.hungamamarathi.com/",
+			"name": "Humgama Marathi"
+		},{
+			"url":"103.16.47.38",
+			"name": "vodafonemusic_ub ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ development server"
+		},{
+			"url":"http://beta.bollywoodhungama.com/hindi/",
+			"name": "bollywood hungama L"
+		},{
+			"url":"http://www.bollywoodhungama.com/hindi/",
+			"name": "bollywood hungama"
+		},{
+			"url":"https://secure.hungama.com",
+			"name":"hungama.com facebook sharing"
+		},{
+			"url":"http://54646.co",
+			"name":"54646 portal 1"
+		},{
+			"url":"http://103.56.210.41/",
+			"name":"54646 portal 2"
+		},{
+			"url":"http://103.56.210.42/",
+			"name":"54646 portal 3"
+		},{
+			"url":"202.87.41.147",
+			"name":"vworld"
+		},{
+			"url":"http://bh-hindi-926429765.us-east-1.elb.amazonaws.com/hindi/",
+			"name":"bollywoodhungama_hindi"
+		},{
+			"url":"http://videocon-2013054827.us-east-1.elb.amazonaws.com/",
+			"name": "videocon-2013054827"
+		},{
+			"url":"https://prod-web.artistaloud.com/",
+			"name":"artist aloud"
+		},{
+			"url":"http://revamp.hungama.com/test/get-vdo-data.php",
+			"name":"revamp hungama"
+		},{
+			"url":"http://affstg.hungama.com/isp/",
+			"name":"aff isp"
+		},{
+			"url":"http://video.hungama.com/",
+			"name":"Videos SNG"
+		},{
+			"url":"http://52.201.49.201/dashboard/player.php",
+			"name":"SM"
+		},{
+			"url":"http://202.87.41.147/playmore/index.php",
+			"name":"playmore"
+		},{
+			"url":"http://m.hungama.com/playmore/",
+			"name":"playmore live"
+		},{
+			"url":"http://staging.bollywoodhungama.com/videoplayer.html",
+			"name":"staging.bollywoodhungama"
+		},{
+			"url":"http://www.bollywoodhungama.com/videoplayer.html",
+			"name":"bollywoodhungama"
+		},{
+			"url":"http://202.87.41.147/store/",
+			"name":"store"
+		},{
+			"url":"http://202.87.41.147/new_store/",
+			"name":"new_store"
+		},{
+			"url":"http://videohub.hungama.com/",
+			"name":"videohub"
+		},{
+			"url":"http://202.87.41.147/slv",
+			"name":"slv"
+		},{
+			"url":"http://m.hungama.com/vhub/",
+			"name":"vhub"
+		},{
+			"url":"http://202.77.41.147/vhub",
+			"name":"vhub-ip"
+		},{
+			"url":"http://202.87.41.147/auplay/",
+			"name":"auplay"
+		},{
+			"url":"http://m.hungama.com/opera",
+			"name":"opera"
+		},{
+			"url":"http://m.hungama.com/xender",
+			"name":"xender"
+		},{
+		  "url":"202.87.41.147/opera",
+		  "name":"stg-opera"
+		},{
+		  "url":"http://stgrevamp.hungama.com",
+		  "name":"stg-hungama-revamp"
+		},{
+		  "url":"http://103.16.47.92/opera/",
+		  "name":"opera_stg_2"
+		},{
+		  "url":"http://202.87.41.147/testbed/store/",
+		  "name":"testbed_store"
+		},{
+		  "url":"http://202.87.41.147/store/",
+		  "name":"store"
+		},{
+         "url":"http://202.87.41.147/playin",
+         "name":"playin"
+		},{
+         "url":"http://play.hungama.com",
+         "name":"http://play.hungama.com"
+		},{
+         "url":"http://mtnlstg.hungama.com",
+         "name":"mtnlstg"
+      },{
+          "url":"http://dev.hungama.com",
+         "name":"devhun"     
+      },{
+          "url":"http://www.hungamafood.com",
+         "name":"hunfoo"     
+      },{
+            "url":"http://mtnlstg.hungama.com",
+            "name":"mtnlstg"
+        },{
+            "url":"http://revampmtnl.hungama.com",
+            "name":"revampmtnl"
+        },{
+            "url":"http://xender.hungama.com/",
+            "name":"xender"
+        },{
+            "url":" http://opera.hungama.com",
+            "name":"operahungama"
+        },{
+            "url":" http://operadev.hungama.com",
+            "name":"operahungama"
+        },{
+            "url":"http://10.0.2.175",
+            "name":"local ip"
+        },{
+            "url":"http://ispstg.hungama.com",
+            "name":"ispstg"
+        },{
+            "url":"http://webviewdev.hungama.com",
+            "name":"devwebview"
+        },{
+            "url":"http://webview.hungama.com",
+            "name":"webview"
+        },{
+            "url":"http://metro.hungama.com",
+            "name":"metrohungama"
+        },{"url":"isprevamp.hungama.com","name":"isprevamp"},
+        {"url":"http://cdn.test.play.hungama.com","name":"cdntest"},
+        {"url":"http://mimicromax.com/","name":"mimicromax"},
+        {"url":"http://www.artistaloud.com/","name":"artistaloud"},
+        {"url":"http://bsnlstg.hungama.com/","name":"bsnlstg"},
+        {"url":"http://www.hungamafood.com","name":"ranveer_brar_hybrid_app"},
+        {"url":"http://bsnlrevamp.hungama.com","name":"bsnlrevamp"},
+        {"url":"http://bsnl.hungama.com","name":"bsnllive"},
+        {"url":"http://www.hungama.com/isp/microscan/","name":"microscan"},
+        {"url":"http://www.hungama.com/isp/tatasky/","name":"tatasky"},
+        {"url":"http://namasteindiabollywood.com","name":"namasteindiabollywood"},
+        {"url":"https://videoworld.hungama.com/","name":"videoworld"},
+        {"url":"https://free.hungama.com/","name":"freehungama"},
+        {"url":"https://stg.bollywoodhungama.com","name":"stg bh"},
+        {"url":"https://www.bollywoodhungama.com","name":"bh"},
+        {"url":"https://bollywoodhungama.com","name":"bh"},
+        {"url":"http://vivanationtv.com","name":"vivanationtv"},
+        {"url":"http://www.hungama.com/isp/ani","name":"ani"},
+        {"url":"http://gcp.bollywoodhungama.com","name":"gcp"},
+        {"url":"http://gcp.bollywoodhungama.com/hindi","name":"gcp_hindi"},
+        {"url":"http://localhost:2000","name":"node local"}
+])

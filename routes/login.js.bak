@@ -1,0 +1,45 @@
+const fs = require('fs');
+
+module.exports = {
+    registerPage: (req, res) => {
+        res.render('signup/register-user.ejs', {
+            title: "Welcome to Hungama | Login Page"
+            ,message: ''
+        });
+    },
+	loginPage: (req, res) => {
+		res.render('signup/login-user.ejs', {
+			title: "Welcome to Hungama | Login Page"
+			,message: ''
+		});
+	},
+    registerUser: (req, res) => {
+
+        let message = '';
+        let username = req.body.username;
+		let password = req.body.password;
+
+        let usernameQuery = "SELECT * FROM `users` WHERE user_name = '" + username + "' AND password = '" + password + "'";
+
+        db.query(usernameQuery, (err, result) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            if (result.length > 0) {
+				var sess = req.session;  //initialize session variable
+				req.session.userId = results[0].id;
+				req.session.user = results[0];
+				console.log(results[0].id);
+                res.render('/', {
+                    message,
+                    title: "Welcome to Hungama"
+                });
+            } else {
+				res.render('signup/register-user.ejs', {
+					title: "Welcome to Hungama | Signup Page"
+					,message: ''
+				});
+            }
+        });
+    }
+};
