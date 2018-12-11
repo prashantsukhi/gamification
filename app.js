@@ -8,29 +8,28 @@ const app = express();
 
 var session = require('express-session');
 app.use(session({
-  secret: 'keyboard cat',
-  resave: false,
-  saveUninitialized: true,
-  cookie: { maxAge: 60000 }
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { maxAge: 60000 }
 }))
 
-app.use(function(req, res, next) {
-  res.locals.user = req.session.user;
-  next();
+app.use(function (req, res, next) {
+    res.locals.user = req.session.user;
+    next();
 });
-	
-const {getHomePage} = require('./routes/index');
-const {getVideoPage, getVideo, getHlsUrl, getStreamVideo} = require('./routes/videos');
-const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
-const {loginPage, loginUser, registerPage, registerUser, signout} = require('./routes/signup');
-//const {addBlock} = require('./routes/blocks');
 
+const { getHomePage } = require('./routes/index');
+const { getVideoPage, getVideo, getHlsUrl, getStreamVideo } = require('./routes/videos');
+const { addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage } = require('./routes/player');
+const { loginPage, loginUser, registerPage, registerUser, signout } = require('./routes/signup');
+const { addBlock } = require('./routes/blocks');
 
 const port = 2000;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
-const db = mysql.createConnection ({
+const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
@@ -70,7 +69,7 @@ app.get('/signup', registerPage);
 app.post('/login', loginUser);
 app.post('/signup', registerUser);
 app.get('/signout', signout);
-//app.get('/addBlock', addBlock);
+app.post('/addBlock', addBlock);
 app.get('/videos', getVideoPage);
 app.get('/videos/:id', getVideo);
 app.get('/api/videos/:id', getHlsUrl);
