@@ -16,7 +16,31 @@ class Block {
 
 class Blockchain {
   constructor() {
-    this.chain = [this.createGenesisBlock()];
+    const selectQuery = 'SELECT * FROM blockchain LIMIT 1;';
+    db.query(selectQuery, (err, result) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+
+      const record = result[0];
+      if (record) {
+        this.chain = JSON.parse(record);
+      } else {
+        this.chain = [this.createGenesisBlock()];
+        this.saveChain();
+      }
+    });
+  }
+
+  saveChain() {
+    const saveQuery = `UPDATE blockchain SET record=${JSON.stringify(this.chain)};`;
+    db.query(saveQuery, (err) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+    });
   }
 
   createGenesisBlock() {
@@ -31,6 +55,7 @@ class Blockchain {
     newBlock.previousHash = this.getLatestBlock().hash;
     newBlock.hash = newBlock.calculateHash();
     this.chain.push(newBlock);
+    this.saveChain();
   }
 
   isChainValid() {
