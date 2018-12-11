@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script src="https://onestore.hungama.com/assets/scripts/jquery-1.11.3.min.js"></script>
+    <script src="https://player.hungama.com/player/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://player.hungama.com/player/js/hls.min.js"></script>
+    <script src="/assets/scripts/videoplayer.min.js?v=0.1"></script>
+    <link href="https://player.hungama.com/lap/css/playerIcons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://player.hungama.com/lap/css/videoplayer.css">
+    <script type="text/javascript" src="/assets/scripts/music_player.js"></script>
+    <title><%= title %></title>
+</head>
+<style>
+    .table-wrapper {
+        margin-top: 50px;
+    }
+
+    .player-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .add-player-form {
+        margin-top: 50px;
+    }
+</style>
+<body>
+<div class="page-wrapper">
+    <!--nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1"><a href="/">Socka Players</a></span>
+        <a class="float-right" href="/add" title="Add a New Player">Add a Player</a>
+    </nav-->
+    <nav class="navbar navbar-light bg-light">
+        <% if (user == null) { %>
+	<span class="navbar-brand mb-0 h1"><a href="/login">login</a></span>
+	<a class="float-right" href="/signup" title="Register">Register</a>
+	<% }else{ %>
+	<a class="float-right" href="/signout" title="Logout">Logout</a>
+	<% } %>
+    </nav>
