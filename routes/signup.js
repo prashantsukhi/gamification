@@ -48,28 +48,47 @@ module.exports = {
                             var sess = req.session;  //initialize session variable
                             req.session.userId = result[0].id;
                             req.session.user = result[0];
-                            console.log(result[0].id);
+                            //console.log(' +++++ USER ID +++++' + result[0].id);
 
                             // make blockchain POST request
                             const requestOptions = {
                                 url: 'http://localhost:2000/addBlock',
-                                form: { key: 'value' },
+                                form: { userID: result[0].id, rewardedCoins:4500 },
                             };
+                            var message = '';
                             request.post(requestOptions, (error, response, body) => {
                                 if (!error && response.statusCode === 200) {
                                     try {
                                         const reply = JSON.parse(body);
                                         if (reply.message === 'OK') {
-                                            // everything OK
+                                            //console.log('+++++ IS A VALID CHAIN +++++');
+                                            res.redirect('/videos');
+                                        } else {
+                                             message = 'This is not a valid transaction! No enough coins to transact!';
+
+                                            res.render('signup/register-user.ejs', {
+                                                title: "Welcome to Hungama | Signup Page"
+                                                , message: message
+                                            });
                                         }
                                     } catch (parseError) {
 
+                                        message = 'Something went wrong!';
+
+                                        res.render('signup/register-user.ejs', {
+                                            title: "Welcome to Hungama | Signup Page"
+                                            , message: message
+                                        });
                                     }
 
                                 } else {
-                                    // something went wrong
+                                    message = 'Something went wrong!';
+
+                                    res.render('signup/register-user.ejs', {
+                                        title: "Welcome to Hungama | Signup Page"
+                                        , message: message
+                                    });
                                 }
-                                res.redirect('/');
                             });
                         }
                     });

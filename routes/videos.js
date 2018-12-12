@@ -12,7 +12,7 @@ const videos = [
 
 module.exports = {
     getVideoPage: (req, res) => {
-        console.log('**************');
+        //console.log('**************');
         res.render('video-player.ejs', {
             title: "Welcome to Socka | Add a new player", message: '', videos
         });
